@@ -13,6 +13,26 @@ public class CompareNumbers {
    */
   public static Integer max(Integer a, Integer b, Integer c) {
     //TODO: Implement me
-    return null;
-  }
-}
+	  if (a==null && b==null && c==null) {
+          return null;
+      }
+      if (a!=null && b!=null && c!=null) {
+          return Math.max(Math.max(a, b), c);
+      }
+      int m=0;
+      if (a!=null) {
+          if (b!=null && c==null) {
+          m= Math.max(a,b);
+          }
+      }
+      if (b!=null) {
+          if (c!=null) {
+          m= Math.max(b,c);
+          }
+          else {
+              m=b;
+          }
+      }
+      return m;
+ }
+} 
